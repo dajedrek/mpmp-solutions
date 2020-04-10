@@ -93,8 +93,9 @@ def writeSolutionToFile(fileName, strategy):
 def solveMPMP(d, c):
     print(f'minFuel({d}, {c}) = {minFuel(d,c):.2f}')
     strategy = travellingStrategy(d, c)
-    # print('\n'.join([f'({a}, {v:.2f})' for a, v in strategy]))
-    simulateTravel(strategy, minFuel(d, c))
+    print(f'Optimal strategy consists of {len(strategy)} steps:')
+    print('\n'.join([f'({a}, {v:.2f})' for a, v in strategy]))
+    # simulateTravel(strategy, minFuel(d, c))
     # writeSolutionToFile('mpmp02', strategy)
 
 
